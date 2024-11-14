@@ -1,215 +1,537 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+  box-sizing: border-box;
+}
+.body {
+  padding-top: 70px;
 }
 
 /* Navbar Styling */
 .navbar {
-    background-color: #004d00;
-    padding: 1rem 0;
+  background-color: #004d00;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 .navbar-brand {
-    display: flex;
-    align-items: center;
-    color: #ffffff !important;
-    font-weight: bold;
-    font-size: 1.5rem;
+  font-family: "Crimson Pro", serif;
+  display: flex;
+  align-items: center;
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 .navbar-brand img {
-    width: 40px; /* Ukuran ikon */
-    height: 40px;
-    margin-right: 10px; /* Jarak antara ikon dan teks */
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
-.nav-link, .btn {
-    color: #ffffff !important;
-    font-size: 1rem;
+.nav-link {
+  font-family: "Crimson Pro", serif;
+}
+.nav-link,
+.btn {
+  color: #ffffff !important;
+  font-size: 1rem;
 }
 .navbar-nav .nav-link:hover {
-    color: #66bb6a !important;
+  font-family: "Crimson Pro", serif;
+  color: #66bb6a !important;
 }
 .navbar .btn {
-    font-weight: 500;
+  font-weight: 500;
 }
- /* Hero Section */
+.vertical-divider {
+  width: 1px;
+  height: 30px; /* Sesuaikan tinggi garis sesuai kebutuhan */
+  background-color: #ffffff;
+  margin: 0 15px; /* Mengatur jarak di kiri dan kanan garis */
+  display: inline-block;
+}
+
+/* Hero Section */
 .hero {
-    background-image: url('img/ImageContent.svg');
-    background-size: cover;
-    /* background-position: center; */
-    color: white;
-    padding: 100px;
-    text-align: center;
+  position: relative;
+  background-image: url("./img/mainImageGradasi.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px;
+  height: 80vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
+
+.hero-content {
+  display: flex;
+  align-items: flex-end; /* Aligns logo and text to the bottom */
+  gap: 15px;
+  position: relative;
+  z-index: 2;
+  margin-left: 20px;
+}
+
+.hero img {
+  width: 80px;
+  height: auto;
+  align-self: flex-end; /* Aligns the image to the bottom of the container */
+  margin-bottom: 5px; /* Adjusts the image to sit slightly lower */
+}
+
 .hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  margin: 0;
 }
+
 .hero p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  margin: 0;
 }
+
+/* .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+} */
+
+/* .hero h1,
+.hero p {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+} */
+
+/* Slider Container Styling */
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  width: calc(100vw - 4px); /* Mengurangi 2px di setiap sisi */
+  max-width: 100%;
+  margin: -80px auto 0; /* Mengatur margin-top negatif untuk overlay */
+  padding: 20px 2px 0; /* Padding atas 20px, kanan-kiri 2px */
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  position: relative;
+  z-index: 2; /* Supaya berada di atas overlay hero */
+}
+
+/* Styling untuk setiap kartu */
+.card {
+  flex: 0 0 40%;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  overflow: hidden; /* Memastikan konten tetap dalam batas kartu */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: center;
+  text-align: center;
+  padding: 0;
+}
+/* .card {
+  flex: 0 0 60%;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: center;
+  text-align: center;
+} */
+
+/* Warna latar belakang setiap kartu */
+.card.kentang {
+  background-color: #ffe4e4;
+}
+.card.tomat {
+  background-color: #e4ffdb;
+}
+.card.jagung {
+  background-color: #fff3db;
+}
+
+/* Styling gambar dan teks */
+.card img {
+  width: 100%; /* Membuat gambar memenuhi seluruh lebar kartu */
+  height: auto;
+  border-radius: 0; /* Menghilangkan border-radius untuk menyatu dengan kartu */
+  margin-bottom: 0;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Styling tombol navigasi slider */
+.slider-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.slider-navigation button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+.slider-navigation button.active {
+  background-color: #333;
+}
+
+/* Slider Container
+.slider-container {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.slider-item {
+  flex: 0 0 100%; 
+  scroll-snap-align: start;
+  position: relative;
+}
+.slider-item img {
+  width: 100%;
+  height: auto;
+}
+
+.slider-overlay {
+  position: absolute;
+  bottom: 20px;
+  width: 90%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+
+.slider-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  z-index: 3;
+}
+.slider-navigation button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+}
+.slider-navigation button.active {
+  background-color: #ffffff;
+} */
 
 /* Category Section */
 .category {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 .category img {
-    width: 150px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 23px;
-    margin-bottom: 10px;
-    border: 2px solid #66bb6a;
+  width: 150px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 23px;
+  margin-bottom: 10px;
+  border: 2px;
+}
+.category h3 {
+  font-weight: 600;
 }
 .category p {
-    font-size: 1rem;
-    font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
+/* Styling product card */
 .product-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 250px;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.product-card img {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    width: 100%;
-    height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 250px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative !important;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .badge-organik {
-    background-color: #4CAF50;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 12px;
-    font-weight: bold;
+  background-color: #4caf50;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10; /* Agar badge tetap di atas elemen lainnya */
+  border-top-left-radius: 8px; /* Hanya border kiri atas yang melengkung */
+}
+.product-card img {
+  padding: 12px;
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+  height: auto;
 }
 
+/* .badge-organik {
+  background-color: #4caf50;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+  border-top-left-radius: 8px;
+} */
 .card-body {
-    padding: 16px;
-    text-align: start;
+  padding: 16px;
+  text-align: start;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
 .product-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-    color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.whislist {
+  color: red;
+}
+
+.whislist i {
+  font-size: 20px; /* Sesuaikan ukuran ikon jika diperlukan */
+  color: red;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4); /* Efek tebal */
 }
 
 .harga {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin-top: 8px;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
 }
 
 .harga img {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.icon-price {
+  transform: rotate(90deg) !important; /* Memastikan rotasi diterapkan */
+  font-size: 16px;
+  margin-right: 4px;
+  color: #a10000;
 }
 
 .price {
-    color: #FF0000;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 0;
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
 }
 
+.title-product {
+  font-weight: 600;
+}
 .scale {
-    color: #666;
-    font-size: 14px;
-    margin-top: 8px;
-    margin-bottom: 5px;
+  color: #666;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+/* .btn-panen {
+  background-color: #4caf50;
+  color: white;
+  padding: 4px 30px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+} */
+.btn-panen {
+  display: flex;
+  align-items: center;
+  background-color: #4caf50;
+  color: white;
+  padding: 4px 20px; /* Mengurangi padding kanan kiri untuk membuat elemen lebih rapat */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  gap: 4px; /* Mengurangi jarak antara ikon dan teks */
 }
 
-.btn-panen {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    /* margin-top: 12px; */
-    font-size: 14px;
+.bagde-panen {
+  font-size: 14px;
+  color: #4caf50;
+  background-color: white;
+  padding: 2px;
+  justify-content: center;
+  border-radius: 50%;
+  line-height: 1;
+  display: inline-flex;
+  line-height: 1;
+  margin-right: 4px;
 }
 
 .btn-chat {
-    background-color: #E5F3FF;
-    color: #007BFF;
-    padding: 8px 16px;
-    border: 1px solid #007BFF;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 8px;
-    display: inline-block;
-    text-decoration: none;
+  background-color: #e5f3ff;
+  color: #007bff;
+  padding: 8px 20px;
+  border: 1px solid #007bff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  line-height: normal;
 }
 
+/* Location Styling */
 .location {
-    color: #777;
-    font-size: 14px;
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  color: #777;
+  font-size: 14px;
+  margin-top: 8px;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  gap: 2px;
+}
+.location svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
 }
 
-.location svg {
-    width: 14px;
-    height: 14px;
-    margin-right: 4px;
-}
 /* Visi & Misi Section */
 .visi-misi img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 .visi-misi ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 .visi-misi ul li {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 20px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
 }
 .visi-misi ul li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #66bb6a;
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #66bb6a;
 }
 
 /* Footer Styling */
 .footer {
-    background-color: #004d00;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
+  background-color: #004d00;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
 }
 .footer p {
-    margin: 0;
-    font-size: 0.9rem;
+  margin: 0;
+  font-size: 0.9rem;
 }
 .footer .social-icons img {
-    width: 30px;
-    margin: 0 10px;
+  width: 30px;
+  margin: 0 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 20px;
+    height: 40vh;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .slider-container {
+    flex-direction: column;
+  }
 }
