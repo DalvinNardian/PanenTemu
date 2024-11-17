@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.content-container {
+    background-image: url("../img/artikel/bag.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 35px;
+    margin-top: 80px;
+}
+
+.title-article {
+    font-size: 24px;
+    margin-top: 3px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.namamain {
+    font-size: 16px;
+    margin: 10px 0 20px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+}
+
+.search-box input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box button {
+    padding: 10px;
+    border: none;
+    background-color: white;
+    color: #1E785D;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.mb-4 {
+    text-align: left;
+}
+
+.cardarti-main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+    padding-top: 16px;
+}
+
+.cardarti-body {
+    padding: 15px;
+}
+
+.content-wrapper {
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardarti-secondary {
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+}
+
+.cardarti {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+}
+
+.cardarti-img-top {
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    object-fit: cover;
+    width: 95%;
+}
+
+.cardarti-main .cardarti-img-top {
+    height: 290px;
+}
+
+.cardarti:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.cardarti-secondary .cardarti-img-top {
+    width: 95%;
+    height: 180px;
+    object-fit: cover;
+    margin: 10px auto;
+}
+
+.content-wrapper .category-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.content-wrapper .category-tag.teknologi {
+    background-color: #a1e79d;
+}
+
+.content-wrapper .category-tag.tips-trik {
+    background-color: #8fd1ff;
+}
+
+.content-wrapper .category-tag.teknologi:hover {
+    background-color: #004d00;
+    color: #fff;
+}
+
+.content-wrapper .category-tag.tips-trik:hover {
+    background-color: #3da8f4;
+    color: #fff;
+}
+
+.container .cardarti {
+    height: 100%;
+    border: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cardarti-title {
+    font-weight: bold;
+}
+
+.container .cardarti-img-top {
+    width: 95%;
+    height: 180px;
+    object-fit: cover;
+    margin: 10px auto;
+}
+
+.container .category-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.container .category-tag.teknologi {
+    background-color: #a1e79d;
+}
+
+.container .category-tag.tips-trik {
+    background-color: #8fd1ff;
+}
+
+.container .category-tag.teknologi:hover {
+    background-color: #004d00;
+    color: #fff;
+}
+
+.container .category-tag.tips-trik:hover {
+    background-color: #3da8f4;
+    color: #fff;
+}
+
+.btn-selengkapnya {
+    display: block;
+    color: #bcbcbc;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #004d00;
+    font-weight: 500;
+}
+
+.breadcrumb a:hover {
+    color: #66bb6a;
+    text-decoration: underline;
+}
+
+.breadcrumb {
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.breadcrumb a:not(:last-child)::after {
+    color: #666;
+}
+
+.breadcrumb a:hover {
+    color: #004d00;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #245b40;
+    margin-top: 20px;
+}
+
+.news-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.paragraf-arti {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.category-card {
+    margin-top: 80px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.category-item {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category-item:hover {
+    background-color: #e0e0e0;
+}
+
+.sticky-sidebar {
+    position: fixed;
+    top: 20px;
+    right: 35px;
+}
+
+/* Media Queries untuk Responsivitas */
+@media (min-width: 768px) {
+    .cardarti-main .cardarti-title {
+        font-size: 18px;
+    }
+
+    .cardarti-main .cardarti-body {
+        font-size: 16px;
+    }
+
+    .cardarti-main .category-tag {
+        font-size: 14px;
+    }
+
+    .cardarti-main .cardarti-body {
+        padding: 15px 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cardarti-main .cardarti-title {
+        font-size: 22px;
+    }
+
+    .cardarti-main .cardarti-body {
+        font-size: 18px;
+    }
+
+    .cardarti-main .category-tag {
+        font-size: 16px;
+    }
+
+    .cardarti-main .cardarti-body {
+        padding: 20px 25px;
+    }
+}

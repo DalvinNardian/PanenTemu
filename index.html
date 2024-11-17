@@ -9,60 +9,51 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/06d7539743.js" crossorigin="anonymous"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
     <style>
-      .hero {
-        position: relative;
-        background-image: url("./img/mainImageGradasi.png");
-        background-size: cover;
-        background-position: center;
-        color: white;
-        padding: 100px;
-        height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 70px; 
-      }
+    .hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center; 
+      justify-content: flex-start; 
+      position: relative;
+      background-image: url("./img/mainImageGradasi.png");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 20px;
+      height: 80vh;
+      margin-top: 70px;
+    }
 
-      .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    margin: auto;
-    height: 100%;
-}
+    .hero-content {
+      flex-shrink: 0; 
+      margin-right: 30px;
+    }
 
+    .hero-text {
+      text-align: left;
+    }
 
-      .hero img {
-        width: 80px;
-        height: auto;
-        align-self: flex-end; 
-        margin-left: 50px; 
-      }
+    .hero-text h1 {
+      font-family: "Rufina", serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      margin: 0;
+    }
 
-      .hero h1 {
-        font-family: "Rufina", serif;
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-        margin-right: 450px;
-      }
-
-      .hero p {
-        font-family: "Rufina", serif;
-        font-size: 1.2rem;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-        margin: 0;
-      }
+    .hero-text p {
+      font-family: "Rufina", serif;
+      font-size: 1.2rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      margin: 10px 0 0 0;
+    }
     </style>
   </head>
   <body>
@@ -70,7 +61,7 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="img/DWEB_PANENTEMU.svg" alt="Logo Panen Temu" />
+          <img src="./img/logo/panenTemu-navbar.svg" alt="Logo Panen Temu" />
           PANEN TEMU
         </a>
         <button
@@ -86,17 +77,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Produk</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Artikel</a></li>
+            <li class="nav-item"><a class="nav-link" href="./artikel/allartikel.html">Artikel</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tentang Kami</a>
+              <a class="nav-link" href="tentangkami.html">Tentang Kami</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-bell bell-custom"></i></a></i></li>
           </ul>
           <div class="vertical-divider"></div>
-          <button class="btn btn-success ms-3">Masuk</button>
-          <button class="btn btn-outline-light ms-2">Daftar</button>
+          <button class="btn btn-success ms-3"><a href="./auth/Login.html" class="auth-link">Masuk</a></button>
+          <button class="btn btn-outline-light ms-2"><a href="./auth/RegistPembeli.html" class="auth-link">Daftar</a></button>
         </div>
       </div>
     </nav>
@@ -106,7 +97,7 @@
       <div class="hero-content">
         <img src="./img/logo/panenTemuPutih.png" />
       </div>
-      <div>
+      <div class="hero-text">
         <h1 >Panen Temu</h1>
         <p>“Akses Langsung ke Segarnya Alam: Dari Petani untuk Anda!”</p>
       </div>
@@ -155,7 +146,7 @@
           <p>Skala Besar</p>
         </div>
         <div class="col">
-          <img src=".//img/category/SkalaKecil.svg" alt="Skala Kecil" />
+          <img src="./img/category/SkalaKecil.svg" alt="Skala Kecil" />
           <p>Skala Kecil</p>
         </div>
       </div>
@@ -163,12 +154,19 @@
 
     <!-- Produk Section -->
     <div class="container my-5">
-      <h3 class="text-start title-product">Produk</h3>
+      <div class="d-flex justify-content-between align-items-center">
+        <h3 class="text-start title-product">Produk</h3>
+        <div class="search-barHome ">
+          <input type="text" placeholder="Cari Sayur Apa... " class="input-searchHome ">
+          <i class="fa-solid fa-magnifying-glass searchHome-custom"></i>
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-4">
+          <!--cardProduct-Panen-->
           <div class="product-card">
             <div class="badge-organik">Organik</div>
-            <img src="img/brocoli.svg" alt="Brokoli" />
+            <img src="./img/produk/Brokoli.jpeg" alt="Brokoli" />
             <div class="card-body">
               <div class="product-header">
                 <h5 class="product-name">Brokoli</h5>
@@ -193,59 +191,193 @@
               </div>
             </div>
           </div>
+          <!--cardProduct-AkanPanen-->
+          <div class="product-card">
+            <div class="badge-organik">Non-Organik</div>
+            <img src="./img/produk/Kentang'.jpeg" alt="Brokoli" />
+            <div class="card-body">
+              <div class="product-header">
+                <h5 class="product-name">Kentang</h5>
+                <div class="whislist">
+                  <i class="bi bi-heart"></i>
+                </div>
+              </div>
+              <div class="harga">
+                <i class="bi bi-tags-fill icon-price"></i>
+                <!-- <img src="img/iconPrince.svg" alt="Icon Harga" /> -->
+                <p class="price">Rp20.000/kg</p>
+              </div>
+              <p class="scale">Skala: Kecil &lt;500m²</p>
+              <button class="btn-akanpanen">
+                <i class="bi bi-clock bagde-akanpanen"></i>3 Hari Lagi Panen
+              </button>
+              <a href="#" class="btn-chat">Chat Sekarang</a>
+              <div class="location">
+                <i class="bi bi-geo-alt-fill"></i>
+                </svg>
+                Probolinggo, Jawa Timur
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="product.html" class="btnHome-selengkapnya">Tampilkan Lebih Banyak</a>
+
+     <!-- Visi & Misi Section -->
+     <div class="visi-misi">
+      <!-- Grid Gambar -->
+      <div class="image-grid">
+        <div class="image-item"><img src="./img/visimisi/VM-Image1.jpg" alt="Gambar 1"></div>
+        <div class="image-item"><img src="./img/visimisi/VM-Image2.jpg" alt="Gambar 2"></div>
+        <div class="logo-vm">
+          <img src="./img/logo/panenTemuHitam.png" alt="Logo">
+        </div>
+        <div class="image-item"><img src="./img/visimisi/VM-Image3.jpg" alt="Gambar 3"></div>
+        <div class="image-item"><img src="./img/visimisi/VM-Image4.jpg" alt="Gambar 4"></div>
+      </div>
+      
+      <!-- Konten Teks -->
+      <div class="content-vm">
+        <h2 class="fw-bold">VISI & MISI</h2>
+        <ol>
+          <li>Menghubungkan petani lokal langsung dengan konsumen untuk meningkatkan transparansi dan kepercayaan dalam transaksi.</li>
+          <li>Memberdayakan petani kecil dengan menciptakan akses pasar yang adil dan mengurangi ketergantungan pada perantara.</li>
+          <li>Mengurangi pemborosan pangan dengan memfasilitasi pemasaran hasil panen sebelum waktu panen tiba.</li>
+          <li>Menawarkan harga sesuai rata-rata pasar lokal guna menciptakan stabilitas harga yang menguntungkan petani dan konsumen.</li>
+          <li>Membangun ekosistem transaksi yang lebih personal dan terpercaya dengan sistem kesepakatan langsung antara petani dan konsumen.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+ <!-- Edukasi Pertanian Section -->
+<div class="container my-5">
+  <h3 class="mb-4 title-artikel">Artikel Pertanian</h3>
+  <!-- Carousel tanpa pengaturan otomatis -->
+  <div id="carouselArticles" class="carousel slide">
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row g-4">
+          <!-- Card Artikel 1 -->
+          <div class="col-md-4">
+            <div class="cardArtikel h-100 border-0 shadow-sm">
+              <img src="img/artikel/fot arti3.jpg" class="cardArtikel-img-top img-fluid" alt="Rice field">
+              <div class="card-body">
+                <button class="categoryArtikel-tag teknologi">Teknologi</button>
+                <h5 class="card-title fw-bold">Inovasi Pertanian Digital, Solusi Krisis Pangan di Tengah Lonjakan Harga Beras</h5>
+                <p class="card-date">Rabu, 9 Oktober 2024</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card Artikel 2 -->
+          <div class="col-md-4">
+            <div class="cardArtikel h-100 border-0 shadow-sm">
+              <img src="img/artikel/tips4.jpeg" class="cardArtikel-img-top img-fluid" alt="E-commerce in agriculture">
+              <div class="card-body">
+                <button class="categoryArtikel-tag tips-trik">Tips & Trik</button>
+                <h5 class="card-title fw-bold">Solusi Efisien Untuk E-Commerce Agrikultur: Pendekatan Hybrid dalam Klasifikasi</h5>
+                <p class="card-date">Selasa, 3 September 2024</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card Artikel 3 -->
+          <div class="col-md-4">
+            <div class="cardArtikel h-100 border-0 shadow-sm">
+              <img src="img/artikel/fot arti4.jpg" class="cardArtikel-img-top img-fluid" alt="Plant nutrition">
+              <div class="card-body">
+                <button class="categoryArtikel-tag teknologi">Teknologi</button>
+                <h5 class="card-title fw-bold">Nutrisi Tambahan dengan Musik untuk Meningkatkan Pertumbuhan Tanaman</h5>
+                <p class="card-date">Jumat, 17 November 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="row g-4">
+          <!-- Card Artikel 4 -->
+          <div class="col-md-4">
+            <div class="cardArtikel h-100 border-0 shadow-sm">
+              <img src="img/artikel/tips3.jpeg" class="cardArtikel-img-top img-fluid" alt="Tips for plants">
+              <div class="card-body">
+                <button class="categoryArtikel-tag tips-trik">Tips & Trik</button>
+                <h5 class="card-title fw-bold">Cara Mudah Meningkatkan Hasil Panen dengan Teknologi Sederhana</h5>
+                <p class="card-date">Selasa, 1 Agustus 2023</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card Artikel 5 -->
+          <div class="col-md-4">
+            <div class="cardArtikel h-100 border-0 shadow-sm">
+              <img src="img/artikel/fot arti5.jpg" class="cardArtikel-img-top img-fluid" alt="Plant innovation">
+              <div class="card-body">
+                <button class="categoryArtikel-tag teknologi">Teknologi</button>
+                <h5 class="card-title fw-bold">Inovasi Pengairan Hemat Energi untuk Petani Lokal</h5>
+                <p class="card-date">Rabu, 15 Oktober 2024</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card Artikel 6 -->
+          <div class="col-md-4">
+            <div class="cardArtikel h-100 border-0 shadow-sm">
+              <img src="img/artikel/tips2.jpg" class="cardArtikel-img-top img-fluid" alt="Agriculture efficiency">
+              <div class="card-body">
+                <button class="categoryArtikel-tag tips-trik">Tips & Trik</button>
+                <h5 class="card-title fw-bold">Manfaat Kompos Alami untuk Pertumbuhan Tanaman</h5>
+                <p class="card-date">Jumat, 17 November 2023</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-     <!-- Visi & Misi Section -->
-     <div class="container my-5 visi-misi">
-      <h3 class="text-center">VISI & MISI</h3>
-      <div class="row">
-          <div class="col-md-6">
-              <img src="Grid-Image-VM.png" class="img-fluid" alt="Visi & Misi">
-          </div>
-          <div class="col-md-6">
-              <ul>
-                  <li>Menghubungkan petani lokal langsung dengan konsumen untuk meningkatkan transparansi dan kepercayaan.</li>
-                  <li>Memberdayakan petani kecil dengan akses pasar yang adil dan mengurangi ketergantungan pada perantara.</li>
-                  <li>Mengurangi pemborosan pangan dengan memfasilitasi pemasaran hasil panen sebelum waktu panen tiba.</li>
-              </ul>
-          </div>
-      </div>
+    <!-- Carousel controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselArticles" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselArticles" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
+</div>
 
-  <!-- Edukasi Pertanian Section -->
-  <div class="container my-5">
-      <h3 class="text-center">Edukasi Pertanian</h3>
-      <div class="row">
-          <div class="col-md-4">
-              <div class="card">
-                  <img src="EdukasiImage1.jpg" class="card-img-top" alt="Inovasi Pertanian">
-                  <div class="card-body">
-                      <h5 class="card-title">Inovasi Pertanian</h5>
-                      <p class="card-text">Inovasi terbaru dalam pertanian digital untuk masa depan yang lebih baik.</p>
-                  </div>
-              </div>
-          </div>
-          <!-- Tambahkan lebih banyak artikel edukasi -->
-      </div>
-  </div>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <p>&copy; 2024 Z-FarmerProject. All Rights Reserved.</p>
-        <p>
-          Alamat: Jl. Merpati No. 45, Menteng, Jakarta Pusat, DKI Jakarta,
-          Indonesia
-        </p>
-        <div class="social-icons">
-          <a href="#"><img src="FacebookIcon.svg" alt="Facebook" /></a>
-          <a href="#"><img src="TwitterIcon.svg" alt="Twitter" /></a>
-          <a href="#"><img src="InstagramIcon.svg" alt="Instagram" /></a>
+      <div class="container-footer">
+        <div class="footer-content">
+          <div class="footer-left">
+            <img src="./img/logo/panenTemuPutih.png" alt="Panen Temu Logo" class="logo-footer" />
+            <div class="social-icons">
+              <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://whatsapp.com"><i class="fa-solid fa-phone"></i></a>
+              <a href="https://gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="footer-address">
+            <p class="address">
+              Alamat: Budi Santoso, Jl. Merpati No. 45, RT 02 RW 08, Kel. Menteng, Kec. Menteng, Jakarta Pusat, DKI Jakarta 10310, Indonesia
+            </p>
+          </div>
+          <div class="footer-concept">
+            <h3>Konsep Panen-Temu</h3>
+            <p>Panen Temu - Platform non-profit yang menghubungkan petani langsung dengan konsumen, memungkinkan transaksi langsung di lahan pertanian untuk hasil panen segar, harga adil, dan pemberdayaan petani kecil tanpa perantara.</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 <strong>AL-FURQON2</strong>. All Rights Reserved</p>
         </div>
       </div>
     </footer>
+
     <script src="./js/slider.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
