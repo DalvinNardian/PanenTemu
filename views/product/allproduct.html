@@ -1,22 +1,476 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="id">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panen Temu | Produk </title>
-    <link rel="shortcut icon" href="./img/logo/panenTemuPutih.png" type="image/x-icon">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <title>Panen Temu | Home </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">
+    <link rel="shortcut icon" href="./public/img/logo/panenTemuPutih.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/06d7539743.js" crossorigin="anonymous"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/product/style.css" />
+    <style>
+    .hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center; 
+      justify-content: flex-start; 
+      position: relative;
+      background-image: url("../public/img/mainImageGradasi.png");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 20px;
+      height: 80vh;
+      margin-top: 70px;
+    }
+
+    .hero-content {
+      flex-shrink: 0; 
+      margin-right: 30px;
+    }
+
+    .hero-text {
+      text-align: left;
+    }
+
+    .hero-text h1 {
+      font-family: "Rufina", serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      margin: 0;
+    }
+
+    .hero-text p {
+      font-family: "Rufina", serif;
+      font-size: 1.2rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      margin: 10px 0 0 0;
+    }
+
+    .btn-icnlove {
+      background: transparent;
+      border: none;
+      margin: 0;
+      font-size: 24px;
+      outline: none;
+      color: rgb(255, 0, 0);
+  }
+
+  .btn-icnlove .icon-love:hover {
+      cursor: pointer;
+  }
+</style>
 </head>
-<body>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/public/img/logo/panenTemu-navbar.svg" alt="Logo Panen Temu" />
+          PANEN TEMU
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="./product/allproduct.html">Produk</a></li>
+                <li class="nav-item"><a class="nav-link" href="./artikel/allartikel.html">Artikel</a></li>
+                <li class="nav-item"><a class="nav-link" href="./tentangKami.html">Tentang Kami</a></li>
+            <li class="nav-item show-on-small"><a class="nav-link" href="#">Chat</a></li>
+            <li class="nav-item hide-on-small"><a class="nav-link" href="#"><i class="bi bi-bell bell-custom"></i></a></i></li>
+          </ul>
+          <div class="vertical-divider hide-on-small"></div>
+          <button class="btn btn-success ms-3" ><a href="./auth/Login.html" class="auth-link text-light">Masuk</a></button>
+          <button class="btn btn-outline-light ms-2"><a href="./auth/RegistPembeli.html" class="auth-link text-light">Daftar</a></button>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <section>
+      <section class="hero-allprdk">
+        <img class="hero-igallprdk" src="/public/img/mainImage.jpg" alt="Main Hero Image">
+      </section>
     
-</body>
+      <section class="productallada">
+        <div class="product-alldlmbox">
+
+          <div class="ctgrldrop">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <span class="category-label">Kategori Produk</span>
+            <ul class="ktgdrop-allpro">
+              <li class="kategori-dropprdk"><a class="active-aa" href="#">Home</a></li>
+              <li class="kategori-dropprdk"><a href="#" class="a-allproduct">Organik</a></li>
+              <li class="kategori-dropprdk"><a href="#" class="a-allproduct">Non Organik</a></li>
+              <li class="kategori-dropprdk"><a href="#" class="a-allproduct">Akan Panen</a></li>
+              <li class="kategori-dropprdk"><a href="#" class="a-allproduct">Panen</a></li>
+              <li class="kategori-dropprdk"><a href="#" class="a-allproduct">Skala Besar</a></li>
+              <li class="kategori-dropprdk"><a href="#" class="a-allproduct">Skala Kecil</a></li>
+            </ul>
+          </div>
+
+          <div class="kotakallpro">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+              <h3 class="text-start namaall-prdt">Produk</h3>
+              <div class="search-aalprdkt">
+                <input type="text" placeholder="Cari Sayur Apa... " class="input-aalprdkt">
+                <i class="fa-solid fa-magnifying-glass searchHome-allprdkt"></i>
+              </div>
+            </div>
+    
+            <div class="rowprdkall row">
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="prdkalldt-card">
+                  <div class="tandaall-organik">Organik</div>
+                  <img src="../public/img/produk/Brokoli.jpeg" alt="Brokoli" class="imgallprdk" />
+                  <div class="cardprdkall-body">
+                    <div class="prdkall-header">
+                      <h5 class="prdkall-name">Brokoli</h5>
+                      <div class="whislist-allprdk">
+                        <button class="btnprdkall-icnlove">
+                          <i class="far fa-heart iconprdkall-love"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="hargaprdkall">
+                      <i class="bi bi-tags-fill iconprdkall-price"></i>
+                      <p class="priceprdkall">Rp20.000/kg</p>
+                    </div>
+                    <p class="scaleprdk-all">Skala: Kecil &lt;500m²</p>
+                    <button class="btnprdk-panenall">
+                      <i class="bi bi-clock bagdeprdk-panenall"></i>Panen
+                    </button>
+                    <a href="#" class="btnprdk-chatall">Chat Sekarang</a>
+                    <div class="locationprdkall">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      Bandung, Jawa Barat
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="prdkalldt-card">
+                  <div class="tandaall-organik">non Organik</div>
+                  <img src="../public/img/produk/Brokoli.jpeg" alt="Brokoli" class="imgallprdk" />
+                  <div class="cardprdkall-body">
+                    <div class="prdkall-header">
+                      <h5 class="prdkall-name">Brokoli</h5>
+                      <div class="whislist-allprdk">
+                        <button class="btnprdkall-icnlove">
+                          <i class="far fa-heart iconprdkall-love"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="hargaprdkall">
+                      <i class="bi bi-tags-fill iconprdkall-price"></i>
+                      <p class="priceprdkall">Rp20.000/kg</p>
+                    </div>
+                    <p class="scaleprdk-all">Skala: Kecil &lt;500m²</p>
+                    <button class="btnprdakall-akanpanen">
+                      <i class="bi bi-clock bagdeprdkalla-akanpanen"></i>3 Hari Lagi Panen
+                    </button>
+                    <a href="#" class="btnprdk-chatall">Chat Sekarang</a>
+                    <div class="locationprdkall">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      Probolinggo, Jawa Timur
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="prdkalldt-card">
+                  <div class="tandaall-organik">Organik</div>
+                  <img src="../public/img/produk/Brokoli.jpeg" alt="Brokoli" class="imgallprdk" />
+                  <div class="cardprdkall-body">
+                    <div class="prdkall-header">
+                      <h5 class="prdkall-name">Brokoli</h5>
+                      <div class="whislist-allprdk">
+                        <button class="btnprdkall-icnlove">
+                          <i class="far fa-heart iconprdkall-love"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="hargaprdkall">
+                      <i class="bi bi-tags-fill iconprdkall-price"></i>
+                      <p class="priceprdkall">Rp20.000/kg</p>
+                    </div>
+                    <p class="scaleprdk-all">Skala: Kecil &lt;500m²</p>
+                    <button class="btnprdk-panenall">
+                      <i class="bi bi-clock bagdeprdk-panenall"></i>Panen
+                    </button>
+                    <a href="#" class="btnprdk-chatall">Chat Sekarang</a>
+                    <div class="locationprdkall">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      Bandung, Jawa Barat
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="prdkalldt-card">
+                  <div class="tandaall-organik">non Organik</div>
+                  <img src="../public/img/produk/Brokoli.jpeg" alt="Brokoli" class="imgallprdk" />
+                  <div class="cardprdkall-body">
+                    <div class="prdkall-header">
+                      <h5 class="prdkall-name">Brokoli</h5>
+                      <div class="whislist-allprdk">
+                        <button class="btnprdkall-icnlove">
+                          <i class="far fa-heart iconprdkall-love"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="hargaprdkall">
+                      <i class="bi bi-tags-fill iconprdkall-price"></i>
+                      <p class="priceprdkall">Rp20.000/kg</p>
+                    </div>
+                    <p class="scaleprdk-all">Skala: Kecil &lt;500m²</p>
+                    <button class="btnprdakall-akanpanen">
+                      <i class="bi bi-clock bagdeprdkalla-akanpanen"></i>3 Hari Lagi Panen
+                    </button>
+                    <a href="#" class="btnprdk-chatall">Chat Sekarang</a>
+                    <div class="locationprdkall">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      Probolinggo, Jawa Timur
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="prdkalldt-card">
+                  <div class="tandaall-organik">Organik</div>
+                  <img src="../../img/produk/Brokoli.jpeg" alt="Brokoli" class="imgallprdk" />
+                  <div class="cardprdkall-body">
+                    <div class="prdkall-header">
+                      <h5 class="prdkall-name">Brokoli</h5>
+                      <div class="whislist-allprdk">
+                        <button class="btnprdkall-icnlove">
+                          <i class="far fa-heart iconprdkall-love"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="hargaprdkall">
+                      <i class="bi bi-tags-fill iconprdkall-price"></i>
+                      <p class="priceprdkall">Rp20.000/kg</p>
+                    </div>
+                    <p class="scaleprdk-all">Skala: Kecil &lt;500m²</p>
+                    <button class="btnprdk-panenall">
+                      <i class="bi bi-clock bagdeprdk-panenall"></i>Panen
+                    </button>
+                    <a href="#" class="btnprdk-chatall">Chat Sekarang</a>
+                    <div class="locationprdkall">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      Bandung, Jawa Barat
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="prdkalldt-card">
+                  <div class="tandaall-organik">non Organik</div>
+                  <img src="../../img/produk/Brokoli.jpeg" alt="Brokoli" class="imgallprdk" />
+                  <div class="cardprdkall-body">
+                    <div class="prdkall-header">
+                      <h5 class="prdkall-name">Brokoli</h5>
+                      <div class="whislist-allprdk">
+                        <button class="btnprdkall-icnlove">
+                          <i class="far fa-heart iconprdkall-love"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="hargaprdkall">
+                      <i class="bi bi-tags-fill iconprdkall-price"></i>
+                      <p class="priceprdkall">Rp20.000/kg</p>
+                    </div>
+                    <p class="scaleprdk-all">Skala: Kecil &lt;500m²</p>
+                    <button class="btnprdakall-akanpanen">
+                      <i class="bi bi-clock bagdeprdkalla-akanpanen"></i>3 Hari Lagi Panen
+                    </button>
+                    <a href="#" class="btnprdk-chatall">Chat Sekarang</a>
+                    <div class="locationprdkall">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      Probolinggo, Jawa Timur
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="prdkalldt-card">
+                  <div class="tandaall-organik">Organik</div>
+                  <img src="../../img/produk/Brokoli.jpeg" alt="Brokoli" class="imgallprdk" />
+                  <div class="cardprdkall-body">
+                    <div class="prdkall-header">
+                      <h5 class="prdkall-name">Brokoli</h5>
+                      <div class="whislist-allprdk">
+                        <button class="btnprdkall-icnlove">
+                          <i class="far fa-heart iconprdkall-love"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="hargaprdkall">
+                      <i class="bi bi-tags-fill iconprdkall-price"></i>
+                      <p class="priceprdkall">Rp20.000/kg</p>
+                    </div>
+                    <p class="scaleprdk-all">Skala: Kecil &lt;500m²</p>
+                    <button class="btnprdk-panenall">
+                      <i class="bi bi-clock bagdeprdk-panenall"></i>Panen
+                    </button>
+                    <a href="#" class="btnprdk-chatall">Chat Sekarang</a>
+                    <div class="locationprdkall">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      Bandung, Jawa Barat
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="prdkalldt-card">
+                  <div class="tandaall-organik">non Organik</div>
+                  <img src="../../img/produk/Brokoli.jpeg" alt="Brokoli" class="imgallprdk" />
+                  <div class="cardprdkall-body">
+                    <div class="prdkall-header">
+                      <h5 class="prdkall-name">Brokoli</h5>
+                      <div class="whislist-allprdk">
+                        <button class="btnprdkall-icnlove">
+                          <i class="far fa-heart iconprdkall-love"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="hargaprdkall">
+                      <i class="bi bi-tags-fill iconprdkall-price"></i>
+                      <p class="priceprdkall">Rp20.000/kg</p>
+                    </div>
+                    <p class="scaleprdk-all">Skala: Kecil &lt;500m²</p>
+                    <button class="btnprdakall-akanpanen">
+                      <i class="bi bi-clock bagdeprdkalla-akanpanen"></i>3 Hari Lagi Panen
+                    </button>
+                    <a href="#" class="btnprdk-chatall">Chat Sekarang</a>
+                    <div class="locationprdkall">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      Probolinggo, Jawa Timur
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                  var btnsIcnLove = document.querySelectorAll('.btnprdkall-icnlove');
+
+                  btnsIcnLove.forEach(function (btn) {
+                      btn.addEventListener('click', function () {
+                          var icon = btn.querySelector(".iconprdkall-love");
+                          if (icon.classList.contains("far")) {
+                              icon.classList.remove("far");
+                              icon.classList.add("fas");
+                              icon.style.color = "red";
+                          } else {
+                              icon.classList.remove("fas");
+                              icon.classList.add("far");
+                              icon.style.color = "";
+                          }
+                      });
+                  });
+
+              </script>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </section>
+
+
+  
+    <footer class="footer">
+      <div class="container-footer">
+        <div class="footer-content">
+          <div class="footer-left">
+            <img src="../../img/logo/panenTemuPutih.png" alt="Panen Temu Logo" class="logo-footer hide-on-small" />
+            <div class="social-icons">
+              <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://whatsapp.com"><i class="fa-solid fa-phone"></i></a>
+              <a href="https://gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="footer-address">
+            <p class="address">
+              Alamat: Budi Santoso, Jl. Merpati No. 45, RT 02 RW 08, Kel. Menteng, Kec. Menteng, Jakarta Pusat, DKI Jakarta 10310, Indonesia
+            </p>
+          </div>
+          <div class="footer-concept hide-on-small">
+            <h3>Konsep Panen-Temu</h3>
+            <p>Panen Temu - Platform non-profit yang menghubungkan petani langsung dengan konsumen, memungkinkan transaksi langsung di lahan pertanian untuk hasil panen segar, harga adil, dan pemberdayaan petani kecil tanpa perantara.</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 <strong>AL-FURQON2</strong>. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel"><i class="leaf-icon">&#127793;</i> Login Pecinta Tanaman</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Masuk untuk berbagi kecintaanmu terhadap dunia tanaman!</p>
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">Alamat Email</label>
+                <input type="email" class="form-control" id="email" placeholder="nama@contoh.com">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Kata Sandi</label>
+                <input type="password" class="form-control" id="password" placeholder="Kata Sandi Anda">
+              </div>
+            </form>
+            <div class="text-center my-3">atau masuk menggunakan</div>
+            <div class="d-flex justify-content-evenly">
+              <button type="button" class="btn btn-google">
+                <i class="bi bi-google"></i> Google
+              </button>
+              <button type="button" class="btn btn-facebook">
+                <i class="bi bi-facebook"></i> Facebook
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-primary">Masuk</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

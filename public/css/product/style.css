@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero-allprdk {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+}
+
+.hero-igallprdk {
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.productallada {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -50px;
+}
+
+.product-alldlmbox {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    margin-top: 30px;
+  }
+
+.ctgrldrop {
+    background: none;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.ktgdrop-allpro {
+    display:flex;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    z-index: 15;
+}
+
+.kategori-dropprdk {
+    margin: 0 15px;
+}
+
+.active-aa {
+    color: #004d00;
+    font-size: 16px;
+    padding-left: 30px;
+    font-weight: bold;
+    border-radius: 3px;
+    position: relative;
+    display: inline-block;
+    background: none;
+}
+
+.a-allproduct {
+    color: #004d00;
+    font-size: 16px;
+    padding-left: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.a-allproduct:hover {
+    text-decoration: underline;
+}
+
+.checkbtn {
+    display: none;
+    font-size: 22px;
+    color: #004d00;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#check {
+    display: none;
+}
+
+.category-label {
+    display: none;
+    color: #004d00;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 200px;
+}
+
+@media (max-width: 1150px) {
+    .ctgrldrop {
+     justify-content: flex-start;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+    }
+  
+    .checkbtn {
+      display: block;
+    }
+  
+    .ktgdrop-allpro {
+      position: absolute;
+      width: 40%;
+      height: 300px;
+      background: #ffffff;
+      top: 80px;
+      left: -100%;
+      text-align: left;
+      transition: all .5s;
+      padding-left: 10px;
+      flex-direction: column;
+      padding: 10px 10px 0 10px;
+      justify-content: flex-start;
+      z-index: 9999;
+    }
+  
+    .kategori-dropprdk {
+      padding: 0px;
+      margin: 0px;
+      margin-top: 10px;
+      align-content: start;
+    }
+  
+    .a-allproduct {
+      font-size: 15px;
+
+    }
+  
+    #check:checked ~ .ktgdrop-allpro {
+      left: 0;
+    }
+  
+    .category-label {
+      display: block;
+      color: #004d00;
+      font-size: 20px;
+      margin-right: 140px;
+      line-height: 80px;
+      font-weight: bold;
+    }
+  
+    .checkbtn,
+    .category-label {
+      display: flex;
+      align-items: center;
+    }
+  
+    .checkbtn {
+      margin-right: 15px;
+    }
+  
+    .ktgdrop-allpro li {
+      display: block;
+    }
+
+    #check:checked ~ .ktgdrop-allpro {
+      align-items: flex-start;
+    }
+  }
+  
+  .kotakallpro {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+  
+  .rowprdkall {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .prdkalldt-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  
+  .tandaall-organik {
+    background-color: #328003;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10;
+    border-top-left-radius: 8px;
+  }
+  
+   .imgallprdk {
+    padding: 12px;
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+  }
+  
+  .cardprdkall-body {
+    padding: 0px 16px 16px 16px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .prdkall-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #333;
+  }
+  
+  .search-aalprdkt {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid #b3b3b3;
+    padding: 3px 5px;
+    background-color: #fff;
+    width: 300px;
+    margin-bottom: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .kotakallpro .d-flex {
+        margin-top: 20px;
+        justify-content: flex-start;
+    }
+    .search-aalprdkt {
+        margin-top: 10px;
+        margin-left: 35%;
+        width: 100%;
+    }
+  }
+  
+  .input-aalprdkt {
+    border: none;
+    outline: none;
+    padding: 6px 40px 6px 15px;
+    flex: 1;
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 500;
+    border-radius: 20px;
+  }
+  
+  .searchHome-allprdkt {
+    position: absolute;
+    right: 15px;
+    color: #b3b3b3;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .prdkall-header {
+    position: relative;
+}
+.whislist-allprdk {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnprdkall-icnlove {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.iconprdkall-love {
+    font-size: 20px;
+    color: #ff0000;
+    transition: color 0.3s ease;
+}
+
+.iconprdkall-love:hover {
+    color: red;
+}
+  
+  .hargaprdkall {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+  }
+  
+  .hargaprdkall .imgallprdk {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+  
+  .iconprdkall-price {
+    transform: rotate(90deg) !important;
+    font-size: 16px;
+    margin-right: 4px;
+    color: #a10000;
+  }
+  
+  .priceprdkall {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .namaall-prdt {
+    font-weight: 600;
+  }
+  
+  .scaleprdk-all {
+    color: #666;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 5px;
+  }
+  
+  .btnprdk-panenall {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #4caf50;
+    color: white;
+    padding: 4px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    gap: 4px;
+    width: auto;
+    height: 30px;
+    white-space: nowrap;
+    margin-right: 40%;
+  }
+  
+  .btnprdakall-akanpanen {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ff7b07;
+    color: white;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    gap: 4px;
+    white-space: nowrap;
+    margin-right: 20%;
+  }
+  
+  .bagdeprdk-panenall {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2px;
+    border-radius: 50%;
+    line-height: 1;
+    margin-right: 4px;
+    line-height: 1;
+    color: #4caf50;
+    background-color: white;
+  }
+  
+  .bagdeprdkalla-akanpanen {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2px;
+    border-radius: 50%;
+    line-height: 1;
+    margin-right: 4px;
+    color: #ff7b07;
+    background-color: white;
+  }
+  .btnprdk-chatall {
+    background-color: #e5f3ff;
+    color: #007bff;
+    padding: 8px 20px;
+    border: 1px solid #007bff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: 35px;
+    box-sizing: border-box;
+    line-height: normal;
+  }
+  
+  .locationprdkall {
+    color: #777;
+    font-size: 14px;
+    margin-top: 8px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    gap: 2px;
+  }
+  .locationprdkall svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+  }
+
+@media (max-width: 576px) {
+    .btnprdk-panenall, .btnprdakall-akanpanen, .btnprdk-chatall {
+      font-size: 10px;
+      padding: 1px 2px;
+      height: 24px;
+    }
+  
+    .imgallprdk {
+      height: 130px;
+    }
+  
+    .locationprdkall {
+      font-size: 10px;
+      color: #777;
+    }
+  
+    .scaleprdk-all, .priceprdkall {
+      font-size: 13px;
+    }
+
+    .namaall-prdt {
+        font-size: 18px;
+    }
+}
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    .btnprdk-panenall, .btnprdakall-akanpanen {
+      font-size: 13px;
+      padding: 5px 15px;
+    }
+  
+    .imgallprdk {
+      height: 180px;
+    }
+  
+    .locationprdkall {
+      font-size: 12px;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 992px) {
+    .btnprdk-panenall, .btnprdakall-akanpanen {
+      font-size: 12px;
+      padding: 5px 7px;
+    }
+  
+    .locationprdkall {
+      font-size: 12px;
+    }
+    .imgallprdk {
+        height: 170px;
+      }
+  }
+  
+  @media (min-width: 993px) and (max-width: 1300px) {
+    .btnprdk-panenall, .btnprdakall-akanpanen {
+      font-size: 15px;
+      padding: 6px 7px;
+    }
+  
+    .locationprdkall {
+      font-size: 14px;
+    }
+  }
+  
+  /* Large desktop: > 1300px */
+  @media (min-width: 1301px) {
+    .btnprdk-panenall, .btnprdakall-akanpanen {
+      font-size: 15px;
+      padding: 9px 10px;
+    }
+  
+    .locationprdkall {
+      font-size: 15px;
+    }
+  }
+  
