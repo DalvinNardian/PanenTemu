@@ -144,7 +144,7 @@ li.nav-item.dropdown::marker {
   }
 
   .navbar-toggler {
-    order: 2; /* Pastikan tombol menu tetap berada di sebelah kanan */
+    /* order: 2; Pastikan tombol menu tetap berada di sebelah kanan */
   }
 
   .profile-container-mobile {

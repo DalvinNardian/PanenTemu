@@ -69,7 +69,7 @@ body {
 .active-aa {
     color: #004d00;
     font-size: 16px;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     font-weight: bold;
     border-radius: 3px;
     position: relative;
@@ -80,14 +80,16 @@ body {
 .a-allproduct {
     color: #004d00;
     font-size: 16px;
-    padding-left: 30px;
+    padding:  10px 20px; /* Ruang dalam */
+    border-radius: 5px; /* Sudut melengkung */
+    transition: background-color 0.3s, color 0.3s; /* Transisi halus */
     font-weight: bold;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 .a-allproduct:hover {
-    text-decoration: underline;
+  background-color: #95e492; /* Warna latar belakang saat dipilih */
+  color: #004d00; /* Warna teks saat dipilih */
 }
 
 .checkbtn {
@@ -125,7 +127,7 @@ body {
     .ktgdrop-allpro {
       position: absolute;
       width: 40%;
-      height: 300px;
+      height: 350px;
       background: #ffffff;
       top: 80px;
       left: -100%;
